@@ -1,0 +1,6 @@
+[window]
+padding = {x = 6, y = 4}
+opacity = 0.0
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font"}
