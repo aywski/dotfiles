@@ -1,0 +1,74 @@
+{
+    "height": 24,
+    "spacing": 4,
+    "modules-left": ["niri/workspaces", "niri/language"],
+    "modules-center": ["niri/window"],
+    "modules-right": ["tray", "network", "bluetooth", "wireplumber", "backlight", "battery", "clock", "custom/power"],
+
+    "niri/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}"
+    },
+
+    "niri/language": {
+        "format": "󰌌 {short}"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰃰 {:%Y-%m-%d}"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "adapter": "ADP0",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁼", "󰁿", "󰁹"]
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱 {device_alias}",
+        "format-off": "󰂲",
+        "on-click": "foot --hold sh -c 'bluetui'"
+    },
+
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-disconnected": "󰤭",
+        "on-click": "foot -e impala"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "foot --hold sh -c 'wiremix'"
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "systemctl suspend"
+    }
+}
