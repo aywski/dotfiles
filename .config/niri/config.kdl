@@ -276,7 +276,7 @@ layout {
 spawn-at-startup "swaybg" "-i" "/home/reimu/Pictures/wallhaven-w5lygx.jpg" "-m" "fill"
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
-spawn-at-startup "swayidle" "-w" "timeout" "1200" "niri msg action power-off-monitors" "resume" "niri msg action power-off-monitors" "timeout" "10800" "systemctl suspend"
+spawn-at-startup "swayidle" "-w" "timeout" "1200" "niri msg action power-off-monitors" "resume" "niri msg action power-off-monitors" "timeout" "10800" "systemctl suspend" "before-sleep" "swaylock" "lock" "swaylock"
 
 // Set system-wide dark color scheme (apps with "follow system theme" option will use dark mode).
 // Note: this is already saved in dconf, so this line is not strictly necessary.

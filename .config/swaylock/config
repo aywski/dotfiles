@@ -1,0 +1,37 @@
+screenshots
+effect-blur=7x5
+fade-in=0.2
+
+clock
+timestr=%H:%M
+datestr=%Y-%m-%d
+
+font=FiraCode Nerd Font
+
+# colors: bg, ring, key highlights, text, line, separator
+color=000000cc
+
+ring-color=597bc5
+ring-ver-color=99ad6a
+ring-wrong-color=cf6a4c
+ring-clear-color=d8ad4c
+
+key-hl-color=71b9f8
+bs-hl-color=cf6a4c
+
+text-color=e8e8d3
+text-ver-color=99ad6a
+text-wrong-color=cf6a4c
+text-clear-color=d8ad4c
+
+line-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+line-clear-color=00000000
+
+inside-color=00000088
+inside-ver-color=00000088
+inside-wrong-color=00000088
+inside-clear-color=00000088
+
+separator-color=00000000
