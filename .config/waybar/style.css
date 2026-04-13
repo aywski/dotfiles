@@ -98,6 +98,14 @@ button {
     color: #e8e8d3;
 }
 
+#mpris {
+    margin: 2px 0;
+    padding: 0 10px;
+    border-radius: 4px;
+    background-color: #3b3b3b;
+    color: #e8e8d3;
+}
+
 #custom-power {
     background-color: #cf6a4c;
     color: #000000;

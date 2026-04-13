@@ -1,7 +1,7 @@
 {
     "height": 24,
     "spacing": 4,
-    "modules-left": ["niri/workspaces", "niri/language"],
+    "modules-left": ["niri/workspaces", "niri/language", "mpris"],
     "modules-center": ["niri/window"],
     "modules-right": ["tray", "network", "bluetooth", "wireplumber", "backlight", "battery", "clock", "custom/power"],
 
@@ -10,6 +10,20 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{icon}"
+    },
+
+    "mpris": {
+        "format": "󰎇 {dynamic}",
+        "format-paused": "󰏤 {dynamic}",
+        "dynamic-len": 30,
+        "dynamic-importance-order": ["title", "artist", "album"],
+        "interval": 1,
+        "player-icons": {
+            "default": "󰎇",
+        },
+        "status-icons": {
+            "paused": "󰏤"
+        }
     },
 
     "niri/language": {
@@ -21,8 +35,9 @@
     },
 
     "clock": {
+        "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "󰥔 {:%H:%M}",
+        "format": "󰥔 {:%H:%M:%S}",
         "format-alt": "󰃰 {:%Y-%m-%d}"
     },
 
@@ -47,8 +62,10 @@
 
     "bluetooth": {
         "format": "󰂯",
-        "format-connected": "󰂱 {device_alias}",
+        "format-connected": "󰂱 devices: {num_connections}",
         "format-off": "󰂲",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
         "on-click": "foot --hold sh -c 'bluetui'"
     },
 
@@ -69,6 +86,6 @@
 
     "custom/power": {
         "format": "󰐥",
-        "on-click": "systemctl suspend"
+        "on-click": "systemctl poweroff"
     }
 }
