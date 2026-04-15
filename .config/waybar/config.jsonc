@@ -1,9 +1,9 @@
 {
     "height": 24,
     "spacing": 4,
-    "modules-left": ["niri/workspaces", "niri/language", "mpris"],
-    "modules-center": ["niri/window"],
-    "modules-right": ["tray", "network", "bluetooth", "wireplumber", "backlight", "battery", "clock", "custom/power"],
+    "modules-left": ["niri/workspaces", "mpris", "niri/window"],
+    "modules-center": [],
+    "modules-right": ["tray", "network", "bluetooth", "wireplumber", "backlight", "battery", "custom/weather", "niri/language", "clock", "custom/power"],
 
     "niri/workspaces": {
         "disable-scroll": true,
@@ -38,7 +38,8 @@
         "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "󰥔 {:%H:%M:%S}",
-        "format-alt": "󰃰 {:%Y-%m-%d}"
+        "format-alt": "󰃰 {:%Y-%m-%d}",
+        "on-click-right": "gnome-calendar"
     },
 
     "backlight": {
@@ -62,7 +63,7 @@
 
     "bluetooth": {
         "format": "󰂯",
-        "format-connected": "󰂱 devices: {num_connections}",
+        "format-connected": "󰂱",
         "format-off": "󰂲",
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
@@ -70,8 +71,10 @@
     },
 
     "network": {
-        "format-wifi": "󰤨 {essid}",
+        "format-wifi": "{icon}",
         "format-disconnected": "󰤭",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format-wifi": "{essid} {signalStrength}%",
         "on-click": "foot -e impala"
     },
 
@@ -82,6 +85,14 @@
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "foot --hold sh -c 'wiremix'"
+    },
+
+    "custom/weather": {
+        "exec": "CITY=$(cat ~/.config/waybar/weather-city 2>/dev/null||echo Kyiv); W=$(curl -sf \"wttr.in/${CITY}?format=%c%t\"|sed \"s/  / /\"); printf '{\"text\":\"%s\",\"tooltip\":\"%s\"}' \"$W\" \"$CITY\"",
+        "interval": 1800,
+        "return-type": "json",
+        "signal": 1,
+        "on-click-right": "foot sh -c 'printf \"City: \"; read CITY; [ -n \"$CITY\" ] && echo \"$CITY\" > ~/.config/waybar/weather-city; pkill -RTMIN+1 waybar'"
     },
 
     "custom/power": {

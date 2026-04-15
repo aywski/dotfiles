@@ -49,19 +49,26 @@ button {
 #backlight,
 #battery,
 #clock,
-#custom-power {
+#custom-power,
+#custom-weather,
+#mpris {
     margin: 2px 0;
-    padding: 0 10px;
+    padding: 0 6px;
     color: #e8e8d3;
     border-radius: 4px;
 }
 
-#clock {
+#clock,
+#battery,
+#backlight,
+#wireplumber,
+#custom-weather,
+#language {
     background-color: #2a2a2a;
 }
 
-#battery {
-    background-color: #2a2a2a;
+#mpris {
+    background-color: #3b3b3b;
 }
 
 #battery.warning {
@@ -76,34 +83,13 @@ button {
 
 #network {
     background-color: #597bc5;
-    color: #e8e8d3;
+    padding: 0 14px 0 10px;
 }
 
 #bluetooth {
     background-color: #71b9f8;
     color: #000000;
-}
-
-#wireplumber {
-    background-color: #2a2a2a;
-    color: #e8e8d3;
-}
-
-#backlight {
-    background-color: #2a2a2a;
-}
-
-#language {
-    background-color: #3b3b3b;
-    color: #e8e8d3;
-}
-
-#mpris {
-    margin: 2px 0;
-    padding: 0 10px;
-    border-radius: 4px;
-    background-color: #3b3b3b;
-    color: #e8e8d3;
+    padding: 0 14px 0 13px;
 }
 
 #custom-power {
