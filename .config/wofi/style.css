@@ -8,13 +8,13 @@
 window {
   margin: 0px;
   background-color: #000000;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 1px solid #3b3b3b;
 }
 
 #input {
   margin: 7px;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 1px solid #3b3b3b;
   color: #e8e8d3;
   background-color: #1a1a1a;
@@ -44,7 +44,7 @@ window {
 
 #entry {
   padding: 4px;
-  border-radius: 8px;
+  border-radius: 0px;
   background-color: transparent;
 }
 

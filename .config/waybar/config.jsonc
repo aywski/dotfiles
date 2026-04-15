@@ -56,7 +56,7 @@
         },
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰚥 {capacity}%",
+        "format-full": "󰚥 {capacity}%",
         "format-icons": ["󰂎", "󰁺", "󰁼", "󰁿", "󰁹"]
     },
 
@@ -95,6 +95,6 @@
 
     "custom/power": {
         "format": "󰐥",
-        "on-click": "systemctl poweroff"
+        "on-click": "foot --app-id=poweroff-confirm --window-size-chars=36x5 bash -c 'echo; echo \"  Shut down the system?\"; echo; read -p \"  [y/N] \" a; [ \"$a\" = y ] && systemctl poweroff'"
     }
 }

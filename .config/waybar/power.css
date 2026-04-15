@@ -1,0 +1,20 @@
+window, .background {
+    background: #1e1e1e;
+}
+
+label {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    xalign: 0.5;
+}
+
+.dialog-action-area {
+    background: #1e1e1e;
+}
+
+button { padding: 6px 24px; border: none; }
+button:first-child { background: #4CAF50; color: white; }
+button:first-child:hover { background: #43A047; }
+button:last-child { background: #e53935; color: white; }
+button:last-child:hover { background: #c62828; }
