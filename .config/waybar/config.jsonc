@@ -1,7 +1,7 @@
 {
     "height": 24,
     "spacing": 4,
-    "modules-left": ["niri/workspaces", "mpris", "niri/window"],
+    "modules-left": ["niri/workspaces", "niri/window", "mpris"],
     "modules-center": [],
     "modules-right": ["tray", "network", "bluetooth", "wireplumber", "backlight", "battery", "custom/weather", "niri/language", "clock", "custom/power"],
 
@@ -13,11 +13,10 @@
     },
 
     "mpris": {
-        "format": "󰎇 {dynamic}",
-        "format-paused": "󰏤 {dynamic}",
-        "dynamic-len": 30,
-        "dynamic-importance-order": ["title", "artist", "album"],
+        "format": "󰎇 {artist} - {title}",
+        "format-paused": "󰏤 {artist} - {title}",
         "interval": 1,
+        "tooltip": false,
         "player-icons": {
             "default": "󰎇",
         },
@@ -88,11 +87,10 @@
     },
 
     "custom/weather": {
-        "exec": "CITY=$(cat ~/.config/waybar/weather-city 2>/dev/null||echo Kyiv); W=$(curl -sf \"wttr.in/${CITY}?format=%c%t\"|sed \"s/  / /\"); printf '{\"text\":\"%s\",\"tooltip\":\"%s\"}' \"$W\" \"$CITY\"",
-        "interval": 1800,
+        "exec": "W=$(curl -sf \"wttr.in/Kyiv?format=%c%t\"|sed \"s/  / /\"); printf '{\"text\":\"%s\",\"tooltip\":\"Kyiv\"}' \"$W\"",
         "return-type": "json",
-        "signal": 1,
-        "on-click-right": "foot sh -c 'printf \"City: \"; read CITY; [ -n \"$CITY\" ] && echo \"$CITY\" > ~/.config/waybar/weather-city; pkill -RTMIN+1 waybar'"
+        "interval": 1800,
+        "on-click": "foot --hold sh -c 'curl wttr.in/Kyiv'"
     },
 
     "custom/power": {

@@ -68,7 +68,8 @@ button {
 }
 
 #mpris {
-    background-color: #3b3b3b;
+    background-color: transparent;
+    color: #888888;
 }
 
 #battery.warning {
@@ -106,7 +107,11 @@ button {
     color: #000000;
 }
 
-#window,
+#window {
+    margin: 0 4px;
+    color: #e8e8d3;
+}
+
 #workspaces {
     margin: 0 4px;
 }
