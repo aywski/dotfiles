@@ -9,6 +9,7 @@ environment {
     LIBVA_DRIVER_NAME "nvidia"
     NVD_BACKEND "direct"
     EDITOR "nvim"
+    QT_QPA_PLATFORM "wayland"
 }
 
 cursor {
@@ -44,7 +45,7 @@ input {
         // drag-lock
         natural-scroll
         // accel-speed 0.2
-        // accel-profile "flat"
+        //  accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
     }

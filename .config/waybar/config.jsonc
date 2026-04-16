@@ -3,7 +3,7 @@
     "spacing": 4,
     "modules-left": ["niri/workspaces", "niri/window", "mpris"],
     "modules-center": [],
-    "modules-right": ["tray", "network", "bluetooth", "wireplumber", "backlight", "battery", "custom/weather", "niri/language", "clock", "custom/power"],
+    "modules-right": ["tray", "network", "bluetooth", "wireplumber", "battery", "custom/weather", "niri/language", "clock", "custom/power"],
 
     "niri/workspaces": {
         "disable-scroll": true,
@@ -89,7 +89,7 @@
     "custom/weather": {
         "exec": "W=$(curl -sf \"wttr.in/Kyiv?format=%c%t\"|sed \"s/  / /\"); printf '{\"text\":\"%s\",\"tooltip\":\"Kyiv\"}' \"$W\"",
         "return-type": "json",
-        "interval": 1800,
+        "interval": 600,
         "on-click": "foot --hold sh -c 'curl wttr.in/Kyiv'"
     },
 

@@ -83,14 +83,23 @@ button {
 }
 
 #network {
-    background-color: #597bc5;
+    background-color: #2a2a2a;
     padding: 0 14px 0 10px;
 }
 
+#network.wifi,
+#network.ethernet,
+#network.linked {
+    background-color: #597bc5;
+}
+
 #bluetooth {
-    background-color: #71b9f8;
-    color: #000000;
+    background-color: #2a2a2a;
     padding: 0 14px 0 13px;
+}
+
+#bluetooth.connected {
+    background-color: #597bc5;
 }
 
 #custom-power {
@@ -102,7 +111,9 @@ button {
 #bluetooth:hover,
 #wireplumber:hover,
 #network:hover,
-#custom-power:hover {
+#clock:hover,
+#custom-power:hover,
+#custom-weather:hover {
     background-color: #99ad6a;
     color: #000000;
 }
