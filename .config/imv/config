@@ -1,0 +1,6 @@
+[options]
+scaling_mode = full
+overlay = true
+overlay_position_bottom = true
+overlay_font = Monospace:11
+overlay_text = $imv_current_file [$imv_width x $imv_height] $imv_scale%  [$imv_current_index/$imv_file_count]

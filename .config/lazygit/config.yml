@@ -1,0 +1,4 @@
+os:
+  edit: 'zeditor --wait {{filename}}'
+  editAtLine: 'zeditor --wait {{filename}}:{{line}}'
+  suspend: false

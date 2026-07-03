@@ -1,0 +1,29 @@
+# clipboard
+set selection-clipboard clipboard
+
+# open fitting to width by default
+set adjust-open width
+
+# smoother zoom and scroll
+set zoom-step 10
+set scroll-step 80
+set scroll-hstep 40
+
+# show filename in titlebar, ~ for home
+set window-title-basename true
+set statusbar-home-tilde true
+
+# don't prompt on quit
+set show-recent 0
+
+# dark recolor (invert colors) - toggle with 'r' in normal mode
+# set recolor true
+# set recolor-darkcolor "#cdd6f4"
+# set recolor-lightcolor "#1e1e2e"
+# set recolor-keephue true
+
+# keyboard: continuous scroll with d/u like vim
+map d scroll down
+map u scroll up
+map D scroll half-down
+map U scroll half-up

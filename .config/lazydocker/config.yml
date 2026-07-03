@@ -1,0 +1,3 @@
+os:
+  editCommand: 'zeditor'
+  editCommandTemplate: '{{editor}} --wait {{filename}}'

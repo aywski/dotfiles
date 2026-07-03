@@ -1,0 +1,155 @@
+@define-color theme_bg_color #000000;
+@define-color theme_fg_color #e8e8d3;
+@define-color theme_base_color #000000;
+@define-color theme_text_color #e8e8d3;
+@define-color theme_selected_bg_color #597bc5;
+@define-color theme_selected_fg_color #e8e8d3;
+@define-color theme_unfocused_bg_color #000000;
+@define-color theme_unfocused_fg_color #888888;
+@define-color insensitive_bg_color #1a1a1a;
+@define-color insensitive_fg_color #888888;
+@define-color borders #2a2a2a;
+@define-color unfocused_borders #1a1a1a;
+@define-color warning_color #d8ad4c;
+@define-color error_color #cf6a4c;
+@define-color success_color #99ad6a;
+@define-color link_color #597bc5;
+
+* {
+    color: #e8e8d3;
+}
+
+window, .background {
+    background-color: #000000;
+    color: #e8e8d3;
+}
+
+headerbar {
+    background-color: #000000;
+    border-bottom: 1px solid #2a2a2a;
+    color: #e8e8d3;
+}
+
+headerbar button {
+    background-color: #2a2a2a;
+    color: #e8e8d3;
+    border: none;
+}
+
+headerbar button:hover {
+    background-color: #3b3b3b;
+}
+
+.sidebar, .places-sidebar {
+    background-color: #000000;
+    color: #e8e8d3;
+}
+
+.sidebar row, .places-sidebar row {
+    color: #888888;
+}
+
+.sidebar row:selected, .places-sidebar row:selected {
+    background-color: #2a2a2a;
+    color: #e8e8d3;
+}
+
+.sidebar row:hover, .places-sidebar row:hover {
+    background-color: #1a1a1a;
+    color: #e8e8d3;
+}
+
+.view, .nautilus-canvas-item {
+    background-color: #000000;
+    color: #e8e8d3;
+}
+
+.view:selected {
+    background-color: #597bc5;
+    color: #e8e8d3;
+}
+
+row {
+    background-color: transparent;
+    color: #e8e8d3;
+}
+
+row:selected {
+    background-color: #597bc5;
+    color: #e8e8d3;
+}
+
+row:hover {
+    background-color: #1a1a1a;
+}
+
+treeview {
+    background-color: #000000;
+    color: #e8e8d3;
+}
+
+treeview:selected {
+    background-color: #597bc5;
+    color: #e8e8d3;
+}
+
+button {
+    background-color: #2a2a2a;
+    color: #e8e8d3;
+    border: 1px solid #3b3b3b;
+}
+
+button:hover {
+    background-color: #3b3b3b;
+}
+
+button:active {
+    background-color: #99ad6a;
+    color: #000000;
+}
+
+entry {
+    background-color: #1a1a1a;
+    color: #e8e8d3;
+    border: 1px solid #2a2a2a;
+}
+
+entry:focus {
+    border-color: #597bc5;
+}
+
+menu, .popup {
+    background-color: #1a1a1a;
+    color: #e8e8d3;
+    border: 1px solid #2a2a2a;
+}
+
+menuitem:hover {
+    background-color: #2a2a2a;
+}
+
+separator {
+    background-color: #2a2a2a;
+}
+
+scrollbar trough {
+    background-color: #0a0a0a;
+}
+
+scrollbar slider {
+    background-color: #3b3b3b;
+}
+
+scrollbar slider:hover {
+    background-color: #888888;
+}
+
+tooltip {
+    background-color: #1a1a1a;
+    color: #e8e8d3;
+    border: 1px solid #2a2a2a;
+}
+
+.nautilus-list-dim-label {
+    color: #888888;
+}

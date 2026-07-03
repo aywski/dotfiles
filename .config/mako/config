@@ -1,0 +1,22 @@
+background-color=#000000
+default-timeout=5000
+text-color=#e8e8d3
+border-color=#3b3b3b
+border-size=1
+border-radius=4
+font=FiraCode Nerd Font 10
+padding=10
+margin=10
+width=320
+height=100
+anchor=top-right
+
+[urgency=low]
+border-color=#3b3b3b
+
+[urgency=normal]
+border-color=#597bc5
+
+[urgency=high]
+border-color=#cf6a4c
+text-color=#cf6a4c
